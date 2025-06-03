@@ -3,9 +3,9 @@ import turtle, math, time, random
 def set_background(image_filename):
 	screen = turtle.Screen()
 	try:
-    	screen.bgpic(f"/workspaces/Computational-Thinking-8/Backgrounds/{image_filename}.png")
+		screen.bgpic(f"/workspaces/Computational-Thinking-8/Backgrounds/{image_filename}.png")
 	except:
-    	screen.bgpic(f"/workspaces/Computational-Thinking-8/Backgrounds/{image_filename}.gif")
+		screen.bgpic(f"/workspaces/Computational-Thinking-8/Backgrounds/{image_filename}.gif")
 def set_image(sprite, image_filename):
 	image_file = f"/workspaces/Computational-Thinking-8/Images/{image_filename}.gif"
 	screen = turtle.Screen()
@@ -25,4 +25,51 @@ window = turtle.Screen()
 window.tracer(0)
 
 #Section 2
-s1 = create_sprite("")
+s1 = create_sprite("madelyn (2)"),0,0
+set_background("inner banks (1)")
+Gold = 0 
+#section 3
+def move_up():
+	s1.setheading(90)
+	s1.forward(10)
+   	 
+def move_down():
+	s1.setheading(270)
+	s1.forward(10)
+    
+def move_left():
+	s1.setheading(180)
+	s1.forward(10)
+    
+def move_right():    
+	s1.setheading(0)
+	s1.forward(10)
+
+window.onkeypress(move_up, "w")
+window.onkeypress(move_down, "s")
+window.onkeypress(move_left, "a")
+window.onkeypress(move_right, "d")
+
+
+# Section 4: Game Loop
+window.listen()
+timer = 0
+while True:
+	time.sleep(0.1)
+	timer += 1  
+	 
+    
+ 	# TODO - code for automatic actions
+
+
+
+
+
+
+	window.update()
+
+	# if :
+	# 	break
+	
+
+print("Game Over")
