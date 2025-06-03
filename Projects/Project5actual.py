@@ -25,9 +25,8 @@ window = turtle.Screen()
 window.tracer(0)
 
 #Section 2
-s1 = create_sprite("madelyn (2)"),0,0
+s1 = create_sprite("madelyn (2)",0,0)
 set_background("inner banks (1)")
-Gold = 0 
 #section 3
 def move_up():
 	s1.setheading(90)
@@ -52,6 +51,8 @@ window.onkeypress(move_right, "d")
 
 
 # Section 4: Game Loop
+s2 = create_sprite("gold nugget",20,90)
+
 window.listen()
 timer = 0
 while True:
@@ -68,8 +69,8 @@ while True:
 
 	window.update()
 
-	# if :
-	# 	break
+	if get_distance (s1,s2)<30:
+		break
 	
 
 print("Game Over")
